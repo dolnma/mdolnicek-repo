@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nginx:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mdolnicek.rule=Host(`mdolnicek.eu`)"
+      - "traefik.http.routers.mdolnicek.entrypoints=web"
+      - "traefik.http.routers.mdolnicek-secured.rule=Host(`mdolnicek.eu`)"
+      - "traefik.http.routers.mdolnicek-secured.entrypoints=websecure"
+      - "traefik.http.routers.mdolnicek-secured.tls=true"
+      - "traefik.http.routers.mdolnicek-secured.tls.certresolver=letsencrypt"
