@@ -14,5 +14,6 @@ prod:
 					up -d --build --force-recreate
 
 deploy:
+    @docker-compose down
 	@git pull
 	@make prod
