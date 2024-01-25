@@ -10,6 +10,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    networks:
+      - default
     env_file:
       - .env
     ports:
@@ -23,8 +27,6 @@ services:
       dockerfile: Dockerfile
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.mdolnicek.rule=Host(`mdolnicek.localhost`)"
-      - "traefik.http.routers.mdolnicek.entrypoints=web"
     networks:
       - default
     volumes:

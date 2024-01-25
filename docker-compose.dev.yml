@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    command: npm run dev
+
+  nginx:
+    labels:
+      - "traefik.http.routers.mdolnicek.rule=Host(`mdolnicek.localhost`)"
+      - "traefik.http.routers.mdolnicek.entrypoints=web"

@@ -1,6 +1,9 @@
 version: '3.8'
 
 services:
+  app:
+    command: npm run start
+
   nginx:
     labels:
       - "traefik.enable=true"
