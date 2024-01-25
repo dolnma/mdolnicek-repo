@@ -3,16 +3,16 @@ import Footer from "./footer";
 import Meta from "./meta";
 
 type Props = {
-  preview?: boolean;
+  isAvailable?: boolean;
   children: React.ReactNode;
 };
 
-const Layout = ({ preview, children }: Props) => {
+const Layout = ({ isAvailable, children }: Props) => {
   return (
     <>
       <Meta />
       <div className="min-h-screen">
-        <Alert preview={preview} />
+        {isAvailable &&  <Alert isAvailable={isAvailable} />}
         <main>{children}</main>
       </div>
       <Footer />

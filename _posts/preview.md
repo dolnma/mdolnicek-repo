@@ -4,8 +4,8 @@ excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 coverImage: "/assets/blog/preview/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
-  name: Joe Haddad
-  picture: "/assets/blog/authors/joe.jpeg"
+  name: Marek Dolnicek
+  picture: "https://media.licdn.com/dms/image/C4D03AQF9HebcbcDQvA/profile-displayphoto-shrink_200_200/0/1643669965214?e=1711584000&v=beta&t=cltudhxpCYoLT7zzcCVh-u4dfnCyqM5iusvd28IBmZY"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
