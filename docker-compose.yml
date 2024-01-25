@@ -18,6 +18,9 @@ services:
   nginx:
     container_name: mdolnicek_nginx
     image: nginx:alpine
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.mdolnicek.rule=Host(`mdolnicek.localhost`)"
