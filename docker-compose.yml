@@ -2,7 +2,7 @@ version: '3.8'
 
 networks:
   default:
-      name: web
+    name: web
 
 services:
   app:
@@ -12,6 +12,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/app
+      - /app/node_modules
+      - /app/.next
     networks:
       - default
     env_file:

@@ -14,5 +14,5 @@ prod:
 					up -d --build --force-recreate
 
 deploy:
-	@git pull origin master  # Pull the latest code from the master branch
-	@make prod               # Start production deployment
+	@git pull
+	@make prod
