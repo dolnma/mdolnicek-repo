@@ -4,9 +4,6 @@ FROM node:21-alpine3.18
 # Set the working directory inside the container
 WORKDIR /app
 
-# Install PM2 globally
-RUN npm install -g pm2
-
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
 
@@ -19,8 +16,5 @@ COPY . .
 # Build the Next.js app
 RUN npm run build
 
-# Expose the port your app will run on (usually 3000)
-EXPOSE 3000
-
-# Use PM2 to start and manage the application
-CMD ["pm2-runtime", "npm", "--", "run", "start"]
+# Start the application
+CMD ["npm", "--", "run", "start"]

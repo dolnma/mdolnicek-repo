@@ -10,8 +10,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file:
+      - .env
     ports:
-      - '3000:3000'
+      - "${PORT}:${PORT}"
 
   nginx:
     container_name: mdolnicek_nginx
